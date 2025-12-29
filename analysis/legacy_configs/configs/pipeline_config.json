@@ -1,0 +1,72 @@
+{
+  "dataset_class": "ChestXrayDataset",
+  "features": {
+    "lazy_loading": true,
+    "multi_label": true,
+    "num_classes": 14,
+    "clahe_preprocessing": true,
+    "online_augmentation": true,
+    "cache": false,
+    "metadata_tracking": true
+  },
+  "preprocessing": {
+    "resize": "512x512",
+    "interpolation": "LANCZOS4",
+    "clahe": {
+      "clip_limit": 2.0,
+      "tile_grid_size": [
+        8,
+        8
+      ]
+    }
+  },
+  "train_loader": {
+    "batch_size": 32,
+    "shuffle": true,
+    "num_workers": 0,
+    "pin_memory": true,
+    "drop_last": true,
+    "samples": 78625,
+    "batches": 2457,
+    "mass_samples": 4054,
+    "mass_percentage": 5.16
+  },
+  "val_loader": {
+    "batch_size": 32,
+    "shuffle": false,
+    "num_workers": 0,
+    "pin_memory": true,
+    "drop_last": false,
+    "samples": 17386,
+    "batches": 544,
+    "mass_samples": 884,
+    "mass_percentage": 5.08
+  },
+  "test_loader": {
+    "batch_size": 32,
+    "shuffle": false,
+    "num_workers": 0,
+    "pin_memory": true,
+    "drop_last": false,
+    "samples": 16109,
+    "batches": 504,
+    "mass_samples": 844,
+    "mass_percentage": 5.24
+  },
+  "performance": {
+    "throughput_samples_per_sec": 73.4,
+    "estimated_epoch_time_minutes": 17.9,
+    "single_batch_load_time_sec": 0.43
+  },
+  "augmentation": {
+    "train": "geometric + intensity + noise (see augmentation_config.json)",
+    "val_test": "normalize only"
+  },
+  "memory_optimization": {
+    "cache_enabled": false,
+    "pin_memory": true,
+    "num_workers": 0,
+    "lazy_loading": true,
+    "note": "Images loaded on-the-fly, no pre-loading"
+  }
+}

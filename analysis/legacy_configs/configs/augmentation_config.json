@@ -1,0 +1,85 @@
+{
+  "strategy": "online augmentation during training",
+  "library": "albumentations",
+  "train_augmentations": {
+    "geometric": {
+      "horizontal_flip": {
+        "probability": 0.5,
+        "note": "RTG s\u0105 symetryczne - bezpieczne"
+      },
+      "vertical_flip": {
+        "enabled": false,
+        "note": "Orientacja ma znaczenie w RTG - NIE stosowa\u0107"
+      },
+      "shift_scale_rotate": {
+        "shift_limit": 0.1,
+        "scale_limit": 0.1,
+        "rotate_limit": 10,
+        "probability": 0.7,
+        "border_mode": "constant",
+        "border_value": 0
+      }
+    },
+    "intensity": {
+      "brightness_contrast": {
+        "brightness_limit": 0.2,
+        "contrast_limit": 0.2,
+        "probability": 0.7
+      },
+      "gamma": {
+        "gamma_limit": [
+          80,
+          120
+        ],
+        "probability": 0.3
+      }
+    },
+    "noise_blur": {
+      "type": "OneOf",
+      "probability": 0.3,
+      "options": [
+        {
+          "name": "GaussNoise",
+          "var_limit": [
+            10.0,
+            30.0
+          ]
+        },
+        {
+          "name": "GaussianBlur",
+          "blur_limit": [
+            3,
+            5
+          ]
+        }
+      ]
+    },
+    "normalization": {
+      "mean": 0.0,
+      "std": 1.0,
+      "max_pixel_value": 255.0
+    }
+  },
+  "val_test_augmentations": {
+    "geometric": null,
+    "intensity": null,
+    "normalization": {
+      "mean": 0.0,
+      "std": 1.0,
+      "max_pixel_value": 255.0
+    },
+    "note": "Tylko normalizacja, bez augmentacji"
+  },
+  "medical_constraints": {
+    "no_vertical_flip": "Orientacja RTG ma znaczenie",
+    "limited_rotation": "Tylko \u00b110\u00b0 \u017ceby nie zniekszta\u0142ci\u0107 anatomii",
+    "limited_shear": "Nie stosujemy - mo\u017ce zmieni\u0107 kszta\u0142ty patologii",
+    "subtle_noise": "Ma\u0142e warto\u015bci \u017ceby nie ukry\u0107 patologii",
+    "preserve_aspect": "Zachowanie proporcji struktur anatomicznych"
+  },
+  "oversampling": {
+    "mass_class": true,
+    "strategy": "augmentation on-the-fly dla rzadkiej klasy Mass",
+    "effective_multiplier": "~2-3x wi\u0119cej przyk\u0142ad\u00f3w Mass przez augmentacj\u0119"
+  }
+}

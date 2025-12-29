@@ -1,0 +1,57 @@
+{
+  "dataset": {
+    "total_images": 112120,
+    "unique_patients": 30805,
+    "age_mean": 46.62636460934713,
+    "age_median": 49.0
+  },
+  "mass_pathology": {
+    "total_cases": 5782,
+    "unique_patients": 2568,
+    "percentage_of_dataset": 5.1569746699964325,
+    "mass_only": 2139,
+    "mass_with_other": 3643,
+    "age_mean": 48.482013144240746,
+    "age_median": 51.0,
+    "with_bbox": 85,
+    "without_bbox": 5697
+  },
+  "pathologies": {
+    "No Finding": 60361,
+    "Infiltration": 19894,
+    "Effusion": 13317,
+    "Atelectasis": 11559,
+    "Nodule": 6331,
+    "Mass": 5782,
+    "Pneumothorax": 5302,
+    "Consolidation": 4667,
+    "Pleural_Thickening": 3385,
+    "Cardiomegaly": 2776,
+    "Emphysema": 2516,
+    "Edema": 2303,
+    "Fibrosis": 1686,
+    "Pneumonia": 1431,
+    "Hernia": 227
+  },
+  "mass_cooccurrences": {
+    "Effusion": 1254,
+    "Infiltration": 1159,
+    "Nodule": 906,
+    "Atelectasis": 739,
+    "Consolidation": 610,
+    "Pleural_Thickening": 452,
+    "Pneumothorax": 431,
+    "Emphysema": 215,
+    "Edema": 129,
+    "Fibrosis": 117,
+    "Cardiomegaly": 102,
+    "Pneumonia": 71,
+    "Hernia": 25
+  },
+  "challenges": {
+    "class_imbalance_ratio": 19.391214112763752,
+    "bbox_coverage_percent": 1.4700795572466274,
+    "patients_with_multiple_images": 13302,
+    "multi_label_percentage": 18.547984302533
+  }
+}

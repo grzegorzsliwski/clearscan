@@ -1,0 +1,25 @@
+# Core ML Framework
+torch==2.9.0+cu128
+torchvision==0.24.0+cu128
+
+# Data Processing
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.7.2
+
+# Image Processing & Augmentation
+albumentations==2.0.8
+opencv-python==4.12.0
+Pillow==11.3.0
+
+# Visualization
+matplotlib==3.10.7
+seaborn==0.13.2
+
+# Utilities
+tqdm==4.67.1
+
+# Optional (for advanced features)
+# tensorboard  # Training visualization
+# wandb        # Experiment tracking
+# grad-cam     # Model interpretability

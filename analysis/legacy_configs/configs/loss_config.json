@@ -1,0 +1,80 @@
+{
+  "task": "Binary Mass Detection",
+  "date": "2025-11-20",
+  "primary_loss": {
+    "name": "BCEWithLogitsLoss",
+    "pytorch_class": "torch.nn.BCEWithLogitsLoss",
+    "parameters": {
+      "pos_weight": 18.394425259003455,
+      "reduction": "mean"
+    },
+    "usage": "criterion(logits, targets)",
+    "input_shape": "[batch, 1]",
+    "target_shape": "[batch, 1]",
+    "target_dtype": "torch.float32",
+    "justification": [
+      "Numerical stability (logits \u2192 sigmoid \u2192 BCE in one op)",
+      "Class imbalance handling via pos_weight",
+      "Standard in medical imaging literature",
+      "PyTorch built-in implementation",
+      "Works with progressive fine-tuning"
+    ]
+  },
+  "alternative_loss": {
+    "name": "FocalLoss",
+    "pytorch_class": "custom implementation",
+    "parameters": {
+      "alpha": 0.9484387917329093,
+      "gamma": 2.0,
+      "pos_weight": 18.394425259003455,
+      "reduction": "mean"
+    },
+    "usage": "focal_loss(logits, targets)",
+    "justification": [
+      "Focuses on hard-to-classify examples",
+      "Down-weights easy examples",
+      "Useful for extreme imbalance",
+      "Optional for ablation study"
+    ]
+  },
+  "class_imbalance": {
+    "train": {
+      "mass_count": 4054,
+      "no_mass_count": 74571,
+      "total": 78625,
+      "mass_percentage": 5.156120826709062,
+      "ratio_mass_to_nomass": "1:18.4",
+      "pos_weight": 18.394425259003455
+    },
+    "val": {
+      "mass_count": 884,
+      "no_mass_count": 16502,
+      "total": 17386,
+      "mass_percentage": 5.084550787990337,
+      "ratio_mass_to_nomass": "1:18.7",
+      "pos_weight": 18.667420814479637
+    },
+    "test": {
+      "mass_count": 844,
+      "no_mass_count": 15265,
+      "total": 16109,
+      "mass_percentage": 5.239307219566702,
+      "ratio_mass_to_nomass": "1:18.1",
+      "pos_weight": 18.08649289099526
+    }
+  },
+  "test_results_dummy_batch": {
+    "bce_unweighted": 0.14981426298618317,
+    "bce_weighted": 1.7229621410369873,
+    "focal_alpha025": 0.0053824386559426785,
+    "focal_weighted": 0.017349183559417725
+  },
+  "implementation_notes": {
+    "model_output": "Raw logits [batch, 1] - NO sigmoid",
+    "loss_input": "Logits [batch, 1] + targets [batch, 1]",
+    "loss_output": "Scalar loss value",
+    "backward": "loss.backward() propagates weighted gradients",
+    "pos_weight_effect": "Positive examples weighted 18.4x higher",
+    "interpretation": "Missing Mass costs 18.4x more than false alarm"
+  }
+}

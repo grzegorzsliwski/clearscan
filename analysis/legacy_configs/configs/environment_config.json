@@ -1,0 +1,55 @@
+{
+  "task": "Binary Mass Detection",
+  "date": "2025-11-20",
+  "python": {
+    "python_version": "3.14.0",
+    "python_implementation": "CPython",
+    "platform": "Linux-6.17.7-300.fc43.x86_64-x86_64-with-glibc2.42",
+    "architecture": "x86_64",
+    "processor": ""
+  },
+  "pytorch": {
+    "pytorch_version": "2.9.0+cu128",
+    "torchvision_version": "0.24.0+cu128",
+    "cuda_available": false,
+    "cuda_version": null,
+    "cudnn_version": null,
+    "device_count": 0,
+    "device_name": null,
+    "device": "cpu"
+  },
+  "libraries": {
+    "torch": "2.9.0+cu128",
+    "torchvision": "0.24.0+cu128",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "albumentations": "2.0.8",
+    "opencv-python": "4.12.0",
+    "Pillow": "11.3.0",
+    "matplotlib": "3.10.7",
+    "seaborn": "0.13.2",
+    "tqdm": "4.67.1"
+  },
+  "resources": {
+    "model_params": 6948609,
+    "batch_size": 32,
+    "epochs_total": 30,
+    "memory_gb": 0.44729234278202057,
+    "estimated_time_hours": 160.01833333333332,
+    "device": "CPU"
+  },
+  "requirements_file": "requirements.txt",
+  "recommendations": {
+    "device": "cpu",
+    "batch_size": 32,
+    "num_workers": 0,
+    "pin_memory": false,
+    "mixed_precision": false,
+    "gradient_checkpointing": false
+  },
+  "warnings": [
+    "CUDA not available - training will be slow on CPU",
+    "Consider using Google Colab (free GPU) or Kaggle"
+  ]
+}

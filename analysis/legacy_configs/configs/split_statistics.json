@@ -1,0 +1,47 @@
+{
+  "split_ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "patient_level": {
+    "train": {
+      "count": 21563,
+      "mass_count": 1798,
+      "mass_percentage": 8.338357371423271
+    },
+    "val": {
+      "count": 4621,
+      "mass_count": 385,
+      "mass_percentage": 8.331529971867562
+    },
+    "test": {
+      "count": 4621,
+      "mass_count": 385,
+      "mass_percentage": 8.331529971867562
+    }
+  },
+  "image_level": {
+    "train": {
+      "count": 78625,
+      "mass_count": 4054,
+      "mass_percentage": 5.156120826709062
+    },
+    "val": {
+      "count": 17386,
+      "mass_count": 884,
+      "mass_percentage": 5.084550787990337
+    },
+    "test": {
+      "count": 16109,
+      "mass_count": 844,
+      "mass_percentage": 5.239307219566702
+    }
+  },
+  "data_leakage_check": {
+    "train_val_overlap": 0,
+    "train_test_overlap": 0,
+    "val_test_overlap": 0,
+    "status": "PASSED"
+  }
+}

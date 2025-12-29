@@ -1,0 +1,43 @@
+# --- Secrets / credentials ---
+# Kaggle API token (never commit)
+kaggle.json
+**/kaggle.json
+
+# --- Virtualenv / Python caches ---
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- OS / editor ---
+.DS_Store
+.vscode/
+
+# --- Datasets / large assets (privacy + size) ---
+# NIH Chest X-ray images (very large)
+data/images/
+
+# Optional: generated bbox visualizations
+# (contains rendered patient images; can be large)
+data/visualizations/mass_bboxes/
+analysis/visualizations/
+
+# --- Training artifacts / outputs (large, reproducible) ---
+# Model checkpoints/weights
+models/
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.onnx
+
+# Experiment outputs / reports / predictions
+analysis/results/
+analysis/results*/
+
+# General outputs
+*.log
+*.tmp

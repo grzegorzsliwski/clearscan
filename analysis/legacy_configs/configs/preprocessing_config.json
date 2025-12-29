@@ -1,0 +1,49 @@
+{
+  "image_format": {
+    "target_size": 512,
+    "channels": 1,
+    "dtype": "float32",
+    "normalization": "0-1 range",
+    "padding": "zeros (black)",
+    "interpolation": "LANCZOS4"
+  },
+  "clahe": {
+    "enabled": true,
+    "clip_limit": 2.0,
+    "tile_grid_size": [
+      8,
+      8
+    ],
+    "recommendation": "Apply for training set"
+  },
+  "label_encoding": {
+    "num_classes": 14,
+    "type": "multi-label binary",
+    "format": "one-hot vector",
+    "mass_index": 9,
+    "label_to_idx": {
+      "Atelectasis": 0,
+      "Cardiomegaly": 1,
+      "Consolidation": 2,
+      "Edema": 3,
+      "Effusion": 4,
+      "Emphysema": 5,
+      "Fibrosis": 6,
+      "Hernia": 7,
+      "Infiltration": 8,
+      "Mass": 9,
+      "Nodule": 10,
+      "Pleural_Thickening": 11,
+      "Pneumonia": 12,
+      "Pneumothorax": 13
+    }
+  },
+  "statistics": {
+    "sample_size": 50,
+    "mean_width": 1024.0,
+    "mean_height": 1024.0,
+    "mean_intensity": 122.0697381401062,
+    "std_intensity": 59.193921734482934,
+    "aspect_ratio_mean": 1.0
+  }
+}
