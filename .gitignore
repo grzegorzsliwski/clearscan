@@ -20,6 +20,8 @@ __pycache__/
 # NIH Chest X-ray images (very large)
 data/images/
 
+working/
+
 # Optional: generated bbox visualizations
 # (contains rendered patient images; can be large)
 data/visualizations/mass_bboxes/
