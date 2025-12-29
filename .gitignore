@@ -25,19 +25,6 @@ data/images/
 data/visualizations/mass_bboxes/
 analysis/visualizations/
 
-# --- Training artifacts / outputs (large, reproducible) ---
-# Model checkpoints/weights
-models/
-*.pth
-*.pt
-*.ckpt
-*.h5
-*.onnx
-
-# Experiment outputs / reports / predictions
-analysis/results/
-analysis/results*/
-
 # General outputs
 *.log
 *.tmp

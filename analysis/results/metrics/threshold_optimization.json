@@ -1,0 +1,6 @@
+{
+  "default_threshold": 0.5,
+  "optimal_threshold_recall_70": 0.2607728838920593,
+  "optimal_threshold_f1": 0.8864143490791321,
+  "optimal_threshold_youden": 0.2816180884838104
+}

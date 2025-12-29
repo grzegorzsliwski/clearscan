@@ -1,0 +1,61 @@
+{
+  "auc_roc": 0.7923736264647369,
+  "thresholds": {
+    "threshold_default": {
+      "tp": 467,
+      "tn": 13823,
+      "fp": 2066,
+      "fn": 368,
+      "accuracy": 0.8544606553456111,
+      "clinical_metrics": {
+        "sensitivity": 0.5592814371257485,
+        "specificity": 0.869972937252187,
+        "ppv": 0.18436636399526254,
+        "npv": 0.9740680713128039
+      },
+      "threshold": 0.5
+    },
+    "threshold_optimal_youden": {
+      "tp": 574,
+      "tn": 12393,
+      "fp": 3496,
+      "fn": 261,
+      "accuracy": 0.7753527864147333,
+      "clinical_metrics": {
+        "sensitivity": 0.6874251497005988,
+        "specificity": 0.7799735666184152,
+        "ppv": 0.14103194103194103,
+        "npv": 0.9793741109530584
+      },
+      "threshold": 0.2816180884838104
+    },
+    "threshold_optimal_f1": {
+      "tp": 296,
+      "tn": 15215,
+      "fp": 674,
+      "fn": 539,
+      "accuracy": 0.9274695049031332,
+      "clinical_metrics": {
+        "sensitivity": 0.35449101796407184,
+        "specificity": 0.9575807162187677,
+        "ppv": 0.30515463917525776,
+        "npv": 0.9657864669290339
+      },
+      "threshold": 0.8864143490791321
+    },
+    "threshold_optimal_recall_70": {
+      "tp": 584,
+      "tn": 12178,
+      "fp": 3711,
+      "fn": 251,
+      "accuracy": 0.7630949533604401,
+      "clinical_metrics": {
+        "sensitivity": 0.6994011976047905,
+        "specificity": 0.766442192711939,
+        "ppv": 0.1359720605355064,
+        "npv": 0.9798052940703195
+      },
+      "threshold": 0.2607728838920593
+    }
+  }
+}

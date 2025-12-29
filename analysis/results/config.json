@@ -1,0 +1,22 @@
+{
+  "model": {
+    "architecture": "DenseNet121",
+    "input_channels": 1,
+    "dropout": 0.4,
+    "spatial_dropout": 0.2,
+    "image_size": 512
+  },
+  "training": {
+    "stage1_epochs": 10,
+    "stage2_epochs": 10,
+    "stage3_epochs": 15,
+    "batch_size_s1_s2": 32,
+    "batch_size_s3": 16,
+    "num_workers": 2,
+    "base_lr": 0.001,
+    "weight_decay": 0.0001,
+    "early_stopping_patience": 3,
+    "grad_clip_max_norm": 1.0,
+    "use_weighted_sampler": true
+  }
+}
