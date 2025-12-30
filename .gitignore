@@ -23,9 +23,7 @@ data/images/
 working/
 
 # Optional: generated bbox visualizations
-# (contains rendered patient images; can be large)
 data/visualizations/mass_bboxes/
-analysis/visualizations/
 
 # General outputs
 *.log
