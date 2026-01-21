@@ -56,6 +56,34 @@
         "npv": 0.9798052940703195
       },
       "threshold": 0.2607728838920593
+    },
+    "threshold_optimal_recall_80": {
+      "tp": 668,
+      "tn": 9869,
+      "fp": 6020,
+      "fn": 167,
+      "accuracy": 0.6300526189906721,
+      "clinical_metrics": {
+        "sensitivity": 0.8,
+        "specificity": 0.621121530618667,
+        "ppv": 0.09988038277511961,
+        "npv": 0.9833599043443603
+      },
+      "threshold": 0.12421908
+    },
+    "threshold_optimal_recall_90": {
+      "tp": 752,
+      "tn": 5886,
+      "fp": 10003,
+      "fn": 83,
+      "accuracy": 0.396914613728773,
+      "clinical_metrics": {
+        "sensitivity": 0.9005988023952096,
+        "specificity": 0.3704449619233432,
+        "ppv": 0.0699209669920967,
+        "npv": 0.9860948232534763
+      },
+      "threshold": 0.038847677
     }
   }
 }

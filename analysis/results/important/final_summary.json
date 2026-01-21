@@ -1,0 +1,12 @@
+{
+  "training": {
+    "stage1_best_val_auc": 0.6474782757500357,
+    "stage2_best_val_auc": 0.7800240101895722,
+    "stage3_best_val_auc": 0.8013777729286713,
+    "total_time_minutes": 686.0432646274567
+  },
+  "evaluation": {
+    "test_auc": 0.7923736264647369,
+    "test_accuracy": 0.8544606553456111
+  }
+}

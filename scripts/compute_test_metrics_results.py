@@ -38,6 +38,11 @@ def compute_confusion_metrics(y_true: np.ndarray, y_pred: np.ndarray) -> dict:
         "tn": tn,
         "fp": fp,
         "fn": fn,
+        "confusion_matrix": {
+            "labels": [0, 1],
+            "matrix": [[tn, fp], [fn, tp]],
+            "order": "[[tn, fp], [fn, tp]]",
+        },
         "accuracy": accuracy,
         "clinical_metrics": {
             "sensitivity": sensitivity,
@@ -103,6 +108,10 @@ def main() -> None:
         thresholds["threshold_optimal_f1"] = float(thr_cfg["optimal_threshold_f1"])
     if "optimal_threshold_recall_70" in thr_cfg:
         thresholds["threshold_optimal_recall_70"] = float(thr_cfg["optimal_threshold_recall_70"])
+    if "optimal_threshold_recall_80" in thr_cfg:
+        thresholds["threshold_optimal_recall_80"] = float(thr_cfg["optimal_threshold_recall_80"])
+    if "optimal_threshold_recall_90" in thr_cfg:
+        thresholds["threshold_optimal_recall_90"] = float(thr_cfg["optimal_threshold_recall_90"])
 
     results = {
         "auc_roc": auc_roc,
